@@ -17,6 +17,7 @@ class Post(db.Model):
   body = db.Column(db.Text)
   created_on = db.Column(db.DateTime, index=True, default=datetime.utcnow)
   user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+  comments = db.relationship('Comment', backref="comment", lazy="dynamic")
 
   def __repr__(self):
     return f"{self.user_id} | {self.title}"
@@ -26,6 +27,7 @@ class Comment(db.Model):
   name = db.Column(db.String(50))
   email = db.Column(db.String(100), index=True)
   body = db.Column(db.Text)
+  post_id = db.Column(db.Integer, db.ForeignKey('post.id'))
 
   def __repr__(self):
     return f"{self.email} | {self.body[:50]}..."
