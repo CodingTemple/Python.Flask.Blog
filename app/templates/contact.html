@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- section INTRO-->
+      <section id="section-intro" class="section-intro-regular">
+        <div class="section-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1>Contacts</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- END section INTRO-->
+<!-- section CONTACTS-->
+<section id="section-contacts" class="section-contacts">
+  <div class="container">
+    <div class="row">
+      <!-- info block 1 FORM-->
+      <div class="col-md-6">
+        <div class="info-block info-block-form">
+          <div class="inner-wrapper">
+            <form action="mail.php" method="POST" class="form-contact">
+              <input type="text" name="visitor_name" placeholder="Your Name *" required>
+              <input type="email" name="visitor_email" title="Please enter a valid e-mail like user@example.com" placeholder="Your E-mail *" required>
+              <textarea name="visitor_msg" placeholder="Your Message..."></textarea>
+              <input type="submit" value="Send message" class="btn btn-cta">
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- END info block 1 FORM-->
+      <!-- info block 2 CONTACTS		-->
+      <div class="col-md-6">
+        <div class="info-block info-block-contacts">
+          <div class="inner-wrapper">
+            <ul class="list-contacts">
+              <li>
+                <div class="contact-icon"><i class="pe-7s-map"></i></div>
+                <div class="contact-info">
+                  <h3>25 Tapleys Hill Road<span>Burton sa 5110, Australia</span></h3>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon"><i class="pe-7s-phone"></i></div>
+                <div class="contact-info">
+                  <h3>+61 (08) 8276 9638<span>Business days only</span></h3>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon"><i class="pe-7s-mail"></i></div>
+                <div class="contact-info">
+                  <h3>hello@dkraemer.com<span>Up to 72 hours respond</span></h3>
+                </div>
+              </li>
+              <li>
+                <p>Brother set had private his letters observe outward resolve. Shutters ye marriage to throwing we as.</p>
+                <p><strong>Or shortly visitor is comfort placing to cheered do.</strong></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- END info block 2 CONTACTS-->
+    </div>
+  </div>
+</section>
+<!-- END section CONTACTS-->
+<!-- section MAP-->
+<section id="section-map" class="section-map">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <header class="header-section hidden">
+          <h2>Map</h2>
+        </header>
+      </div>
+    </div>
+    <div class="row">
+      <div id="google-map" class="google-map"></div>
+    </div>
+  </div>
+</section>
+<!-- END section MAP-->
+{% endblock %}

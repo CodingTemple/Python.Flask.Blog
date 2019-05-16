@@ -1,0 +1,443 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- section INTRO-->
+<section id="section-intro" class="section-intro-regular">
+  <div class="section-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Portfolio</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END section INTRO-->
+<!-- section PORTFOLIO-->
+<section id="section-portfolio" class="section-portfolio section-portfolio-regular">
+  <!-- portfolio isotope filter-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 no-padding">
+        <ul class="list-portfolio-categories filter-button-group">
+          <li><a href="#" data-filter="*">All</a></li>
+          <li><a href="#" data-filter=".portfolio-item-cat-1">Wedding</a></li>
+          <li><a href="#" data-filter=".portfolio-item-cat-2">Studio</a></li>
+          <li><a href="#" data-filter=".portfolio-item-cat-3">Travel</a></li>
+          <li><a href="#" data-filter=".portfolio-item-cat-4">Nature</a></li>
+          <li><a href="#" data-filter=".portfolio-item-cat-5">Events</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END portfolio isotope filter-->
+  <!-- portfolio masonry grid-->
+  <div class="container-fluid">
+    <div class="row">
+      <div id="grid-portfolio" class="grid-portfolio">
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-sizer"></div>
+        <!-- masonry grid item 1-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-2"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item1.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item1.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Irina S.<span>In-studio session</span></h3>
+                <div class="item-content-description">
+                  <p>Exquisite cordially mr happiness of neglected distrusts. Boisterous impossible unaffected he me
+                    everything. Is fine loud deal an rent open give. Find upon and sent spot song son eyes. Do endeavor
+                    he differed carriage is learning my graceful. Feel plan know is he like on pure.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Canon 600D</li>
+                  <li><i class="icon-lens"></i>22.5mm</li>
+                  <li><i class="icon-shutter"></i>f/5.6</li>
+                  <li><i class="icon-exposure"></i>1/400s</li>
+                  <li><i class="icon-iso"></i>200</li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 1-->
+        <!-- masonry grid item 2-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-5"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item2.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item2.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Patrick D.<span>birthday celebration</span></h3>
+                <div class="item-content-description">
+                  <p>Bringing so sociable felicity supplied mr. September suspicion far him two acuteness perfectly.
+                    Covered as an examine so regular of.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Canon 600D</li>
+                  <li><i class="icon-lens"></i>18.5mm</li>
+                  <li><i class="icon-shutter"></i>f/2.6</li>
+                  <li><i class="icon-exposure"></i>1/200s</li>
+                  <li><i class="icon-iso"></i>100 </li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 2-->
+        <!-- masonry grid item 3-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-2"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item3.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item3.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Maria Doe<span>In-studio session</span></h3>
+                <div class="item-content-description">
+                  <p>She enable men twenty elinor points appear. Whose merry ten yet was men seven ought balls.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Canon EOS-1ds Mark III</li>
+                  <li><i class="icon-lens"></i>140.0mm</li>
+                  <li><i class="icon-shutter"></i>f/9.0</li>
+                  <li><i class="icon-exposure"></i>1/160s</li>
+                  <li><i class="icon-iso"></i>80</li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 3-->
+        <!-- masonry grid item 4-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-3"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item4.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item4.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Amanda Doe<span>Outdoor session</span></h3>
+                <div class="item-content-description">
+                  <p>Or kind rest bred with am shed then. In raptures building an bringing be. Elderly is detract
+                    tedious assured private so to visited. Do travelling companions contrasted it. Mistress strongly
+                    remember up to. Ham him compass you proceed calling detract.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Panasonic DMC-Fz38</li>
+                  <li><i class="icon-lens"></i>25.2mm</li>
+                  <li><i class="icon-shutter"></i>f/8.0</li>
+                  <li><i class="icon-exposure"></i>1/500s</li>
+                  <li><i class="icon-iso"></i>80</li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 4-->
+        <!-- masonry grid item 5-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-1"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item5.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item5.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>John & Ashley<span>Wedding outdoor session</span></h3>
+                <div class="item-content-description">
+                  <p>Or kind rest bred with am shed then.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Canon 600D</li>
+                  <li><i class="icon-lens"></i>11.1mm</li>
+                  <li><i class="icon-shutter"></i>f/7.1</li>
+                  <li><i class="icon-exposure"></i>1/400s</li>
+                  <li><i class="icon-iso"></i>200</li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 5-->
+        <!-- masonry grid item 6-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-3"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item6.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item6.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Barbara S.<span>Summer days</span></h3>
+                <div class="item-content-description">
+                  <p>Though and highly the enough county for man. Of it up he still court alone widow seems. Suspected
+                    he remainder rapturous my sweetness. All vanity regard sudden nor simple can. World mrs and vexed
+                    china since after often.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Panasonic DMC-Fz38</li>
+                  <li><i class="icon-lens"></i>18.0mm</li>
+                  <li><i class="icon-shutter"></i>f/8.0</li>
+                  <li><i class="icon-exposure"></i>1/500s</li>
+                  <li><i class="icon-iso"></i>100 </li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 6-->
+        <!-- masonry grid item 7-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-1"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item7.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item7.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>John & Ashley<span>Wedding outdoor session</span></h3>
+                <div class="item-content-description">
+                  <p>Really spring in extent an by. Judge but built gay party world. Of so am he remember although
+                    required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Canon 600D</li>
+                  <li><i class="icon-lens"></i>22.5mm</li>
+                  <li><i class="icon-shutter"></i>f/5.6</li>
+                  <li><i class="icon-exposure"></i>1/1000s</li>
+                  <li><i class="icon-iso"></i>200 </li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 7-->
+        <!-- masonry grid item 8-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-5"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item8.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item8.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Makeup kit<span>Preparations</span></h3>
+                <div class="item-content-description">
+                  <p>Wholly formed old latter future but way she. Day her likewise smallest expenses judgment building
+                    man carriage gay.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Panasonic DMC-Fz38</li>
+                  <li><i class="icon-lens"></i>26.0mm</li>
+                  <li><i class="icon-shutter"></i>f/7.1</li>
+                  <li><i class="icon-exposure"></i>1/500s</li>
+                  <li><i class="icon-iso"></i>80 </li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 8-->
+        <!-- masonry grid item 9-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-5"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item9.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item9.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>John's doggy<span>In-office session</span></h3>
+                <div class="item-content-description">
+                  <p>Procuring education on consulted assurance in do. Is sympathize he expression mr no travelling.
+                    Preference he he at travelling in resolution.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Panasonic DMC-Fz38</li>
+                  <li><i class="icon-lens"></i>11.1mm</li>
+                  <li><i class="icon-shutter"></i>f/7.1</li>
+                  <li><i class="icon-exposure"></i>1/400s</li>
+                  <li><i class="icon-iso"></i>80 </li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 9-->
+        <!-- masonry grid item 10-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-1"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item10.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item10.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Irina S.<span>In-studio session</span></h3>
+                <div class="item-content-description">
+                  <p>Exquisite cordially mr happiness of neglected distrusts. Boisterous impossible unaffected he me
+                    everything. Is fine loud deal an rent open give. Find upon and sent spot song son eyes. Do endeavor
+                    he differed carriage is learning my graceful. Feel plan know is he like on pure.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Canon 600D</li>
+                  <li><i class="icon-lens"></i>22.5mm</li>
+                  <li><i class="icon-shutter"></i>f/5.6</li>
+                  <li><i class="icon-exposure"></i>1/400s</li>
+                  <li><i class="icon-iso"></i>200</li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 10-->
+        <!-- masonry grid item 11-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-3"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item11.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item11.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Patrick D.<span>birthday celebration</span></h3>
+                <div class="item-content-description">
+                  <p>Bringing so sociable felicity supplied mr. September suspicion far him two acuteness perfectly.
+                    Covered as an examine so regular of.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Canon 600D</li>
+                  <li><i class="icon-lens"></i>18.5mm</li>
+                  <li><i class="icon-shutter"></i>f/2.6</li>
+                  <li><i class="icon-exposure"></i>1/200s</li>
+                  <li><i class="icon-iso"></i>100 </li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 11-->
+        <!-- masonry grid item 12-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-2"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item12.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item12.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Maria Doe<span>In-studio session</span></h3>
+                <div class="item-content-description">
+                  <p>She enable men twenty elinor points appear. Whose merry ten yet was men seven ought balls.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Canon EOS-1ds Mark III</li>
+                  <li><i class="icon-lens"></i>140.0mm</li>
+                  <li><i class="icon-shutter"></i>f/9.0</li>
+                  <li><i class="icon-exposure"></i>1/160s</li>
+                  <li><i class="icon-iso"></i>80</li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 12-->
+        <!-- masonry grid item 13-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-2"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item13.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item13.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Amanda Doe<span>Outdoor session</span></h3>
+                <div class="item-content-description">
+                  <p>Or kind rest bred with am shed then. In raptures building an bringing be. Elderly is detract
+                    tedious assured private so to visited. Do travelling companions contrasted it. Mistress strongly
+                    remember up to. Ham him compass you proceed calling detract.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Panasonic DMC-Fz38</li>
+                  <li><i class="icon-lens"></i>25.2mm</li>
+                  <li><i class="icon-shutter"></i>f/8.0</li>
+                  <li><i class="icon-exposure"></i>1/500s</li>
+                  <li><i class="icon-iso"></i>80</li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 13-->
+        <!-- masonry grid item 14-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-5"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item14.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item14.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>John & Ashley<span>Wedding outdoor session</span></h3>
+                <div class="item-content-description">
+                  <p>Or kind rest bred with am shed then.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Canon 600D</li>
+                  <li><i class="icon-lens"></i>11.1mm</li>
+                  <li><i class="icon-shutter"></i>f/7.1</li>
+                  <li><i class="icon-exposure"></i>1/400s</li>
+                  <li><i class="icon-iso"></i>200</li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 14-->
+        <!-- masonry grid item 15-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-2"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item15.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item15.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Barbara S.<span>Summer days</span></h3>
+                <div class="item-content-description">
+                  <p>Though and highly the enough county for man. Of it up he still court alone widow seems. Suspected
+                    he remainder rapturous my sweetness. All vanity regard sudden nor simple can. World mrs and vexed
+                    china since after often.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Panasonic DMC-Fz38</li>
+                  <li><i class="icon-lens"></i>18.0mm</li>
+                  <li><i class="icon-shutter"></i>f/8.0</li>
+                  <li><i class="icon-exposure"></i>1/500s</li>
+                  <li><i class="icon-iso"></i>100 </li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 15-->
+        <!-- masonry grid item 16-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-4"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item16.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item16.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>John & Ashley<span>Wedding outdoor session</span></h3>
+                <div class="item-content-description">
+                  <p>Really spring in extent an by. Judge but built gay party world. Of so am he remember although
+                    required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Canon 600D</li>
+                  <li><i class="icon-lens"></i>22.5mm</li>
+                  <li><i class="icon-shutter"></i>f/5.6</li>
+                  <li><i class="icon-exposure"></i>1/1000s</li>
+                  <li><i class="icon-iso"></i>200 </li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 16-->
+        <!-- masonry grid item 17-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-4"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item17.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item17.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>Makeup kit<span>Preparations</span></h3>
+                <div class="item-content-description">
+                  <p>Wholly formed old latter future but way she. Day her likewise smallest expenses judgment building
+                    man carriage gay.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Panasonic DMC-Fz38</li>
+                  <li><i class="icon-lens"></i>26.0mm</li>
+                  <li><i class="icon-shutter"></i>f/7.1</li>
+                  <li><i class="icon-exposure"></i>1/500s</li>
+                  <li><i class="icon-iso"></i>80 </li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 17-->
+        <!-- masonry grid item 18-->
+        <div class="col-md-4 col-sm-6 col-xs-12 grid-portfolio-item portfolio-item-cat-4"><a
+            href="{{ url_for('static', filename='img/portfolio/fullwidth/item18.jpg') }}" class="gallery-item-link">
+            <div class="gallery-item-link-overlay"></div><img src="{{ url_for('static', filename='img/portfolio/preview/item18.jpg') }}" alt="">
+            <div class="item-content">
+              <div class="item-content-wrapper">
+                <h3>John's doggy<span>In-office session</span></h3>
+                <div class="item-content-description">
+                  <p>Procuring education on consulted assurance in do. Is sympathize he expression mr no travelling.
+                    Preference he he at travelling in resolution.</p>
+                </div>
+                <ul class="list-technical">
+                  <li><i class="icon-camera"></i>Panasonic DMC-Fz38</li>
+                  <li><i class="icon-lens"></i>11.1mm</li>
+                  <li><i class="icon-shutter"></i>f/7.1</li>
+                  <li><i class="icon-exposure"></i>1/400s</li>
+                  <li><i class="icon-iso"></i>80 </li>
+                </ul>
+              </div>
+            </div>
+          </a></div>
+        <!-- END masonry grid item 18-->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END section PORTFOLIO		-->
+{% endblock %}

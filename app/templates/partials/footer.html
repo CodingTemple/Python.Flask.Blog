@@ -1,0 +1,67 @@
+<footer class="main-footer">
+  <nav class="nav-bottom">
+    <!-- footer menu-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="bottom-menu-wrapper">
+            <div class="logo-wrapper"><img src="{{ url_for('static', filename='img/logos/logo_gray.svg') }}" alt=""
+                class="composition-img"></div>
+            <ul class="list-bottom-menu">
+              <li><a href="{{ url_for('index') }}">Home </a></li>
+              <li><a href="{{ url_for('about') }}">About</a></li>
+              <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+              <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+              <li><a href="{{ url_for('blog') }}">Blog</a></li>
+              <li><a href="{{ url_for('contact') }}">Contacts</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END footer menu-->
+    <!-- copyright block-->
+    <div class="bottom-copyright-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>© 2016 "Shuttea - photographers portfolio/blog template". Designed by Artem
+              Semkin.</small></div>
+        </div>
+      </div>
+    </div>
+    <!-- END copyright block-->
+  </nav>
+</footer>
+<!-- blueimp gallery container-->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+  <div class="slides"></div>
+  <div class="wrapper-slide-info">
+    <div class="slide-info"></div>
+  </div>
+  <div class="wrapper-slide-controls">
+    <div class="slide-controls"><a href="#" class="prev"><i class="pe-7s-angle-left"></i></a>
+      <div class="slide-controls-counter"><span class="slide-current"></span><span class="slide-total"></span></div><a
+        href="#" class="next"><i class="pe-7s-angle-right"></i></a>
+    </div>
+  </div><a href="#" class="close"><i class="pe-7s-close"></i></a>
+</div>
+<!-- END blueimp gallery container-->
+<!-- modal form-->
+<div id="formModal" tabindex="-1" role="dialog" aria-labelledby="Photosession Inquiry" class="modal fade form-modal">
+  <div class="modal-wrapper">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Photosession Inquiry</h2><a href="#" data-dismiss="modal" class="close"><i class="pe-7s-close"></i></a>
+        </div>
+        <form action="mail.php" method="POST" class="form-contact">
+          <input type="text" name="visitor_name" placeholder="Your Name *" required>
+          <input type="email" name="visitor_email" title="Please enter a valid e-mail like user@example.com"
+            placeholder="Your E-mail *" required>
+          <textarea name="visitor_msg" placeholder="Your Message..."></textarea>
+          <input type="submit" value="Send message" class="btn btn-cta">
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- END modal form-->

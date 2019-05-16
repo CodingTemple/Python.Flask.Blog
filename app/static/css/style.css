@@ -670,7 +670,7 @@ section.section-intro ul.list-buttons > li:last-child {
 	[8. Section INTRO dark]
 	-------------------------------------------------------------**/
 section.section-intro.section-intro-dark {
-  background: url(img/bg1.jpg);
+  background: url(../img/bg1.jpg);
   background-size: cover;
   background-position-x: 40%;
   background-color: #000;
@@ -688,7 +688,7 @@ section.section-intro.section-intro-dark h1 span {
 	[9. Section INTRO bright]
 	-------------------------------------------------------------**/
 section.section-intro.section-intro-bright {
-  background: url(img/bg4.jpg);
+  background: url(../img/bg4.jpg);
   background-size: cover;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
@@ -727,7 +727,7 @@ section.section-intro.section-intro-bright .heading-welcome:after {
 section.section-intro-regular {
   position: relative;
   background-color: #111;
-  background: url(img/bg3.jpg);
+  background: url(../img/bg3.jpg);
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1534,7 +1534,7 @@ section.section-map .google-map {
 	[20. Section CUSTOM QUOTE]
 	-------------------------------------------------------------**/
 section.section-customquote {
-  background: url(img/bg3.jpg);
+  background: url(../img/bg3.jpg);
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
