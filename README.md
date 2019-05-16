@@ -1,2 +1,2 @@
 ### Branch: 01-Starter
-- [ ] Basic application setup. Only working route is 'index'. No UI.
+- [ ] Basic application setup. Only working route is the 'index' route. No UI.
