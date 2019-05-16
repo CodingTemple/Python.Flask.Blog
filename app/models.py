@@ -20,3 +20,12 @@ class Post(db.Model):
 
   def __repr__(self):
     return f"{self.user_id} | {self.title}"
+
+class Comment(db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  name = db.Column(db.String(50))
+  email = db.Column(db.String(100), index=True)
+  body = db.Column(db.Text)
+
+  def __repr__(self):
+    return f"{self.email} | {self.body[:50]}..."
