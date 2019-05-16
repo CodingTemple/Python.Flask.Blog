@@ -27,7 +27,7 @@ $(document).ready(function() {
 	}
 
 	// hamburger menu handler	
-	$('.menu-toggle').on(clickEvent, function(e) {
+	$('.menu-toggle').on('click', function(e) {
 		e.preventDefault();
 		$(this).toggleClass('open');
 		$('body').toggleClass('is-fixed');
