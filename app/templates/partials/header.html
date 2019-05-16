@@ -15,15 +15,12 @@
     <div id="hamburgermenu-wrapper" class="hamburgermenu-wrapper">
       <!-- list menu-->
       <ul class="list-top-menu">
-        <li><a href="index-interactive_dark.html">Home <sup>interactive dark</sup></a></li>
-        <li><a href="index-interactive_bright.html">Home <sup>interactive bright</sup></a></li>
-        <li><a href="index-parallax_dark.html">Home <sup>parallax</sup> </a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio-grid_1.html">Portfolio <sup>(v 1)</sup></a></li>
-        <li><a href="portfolio-grid_2.html">Portfolio <sup>(v 2)</sup> </a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="blog-list-sidebar.html">Blog</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="{{ url_for('index') }}">Home <!--<sup>interactive dark</sup>--></a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('portfolio') }}">Portfolio <!--<sup>(v 1)</sup>--></a></li>
+        <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
         <li>
           <!-- list social media-->
           <ul class="list-social">
