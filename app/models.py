@@ -28,6 +28,7 @@ class Comment(db.Model):
   email = db.Column(db.String(100), index=True)
   body = db.Column(db.Text)
   post_id = db.Column(db.Integer, db.ForeignKey('post.id'))
+  created_on = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
   def __repr__(self):
     return f"{self.email} | {self.body[:50]}..."
