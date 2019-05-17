@@ -5,5 +5,5 @@
 - [x] Import entire user interface.
 
 ### Branch 3: 03-Blog
-- [x] Blog fully functional.
+- [ ] Blog fully functional.
 
