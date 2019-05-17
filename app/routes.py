@@ -20,6 +20,9 @@ def pricing():
 
 @app.route('/blog')
 def blog():
+  context = {
+    'posts': Post.query.all()
+  }
   return render_template('blog.html', **context)
 
 @app.route('/blog/<int:id>', methods=['GET', 'POST'])
