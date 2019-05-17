@@ -8,7 +8,7 @@ class User(db.Model):
   posts = db.relationship('Post', backref="author", lazy="dynamic")
 
   def __repr__(self):
-    return f"{self.name} | {self.email}"
+    return f"<User: {self.name} | {self.email}>"
 
 class Post(db.Model):
   id = db.Column(db.Integer, primary_key=True)
@@ -20,7 +20,7 @@ class Post(db.Model):
   comments = db.relationship('Comment', backref="comment", lazy="dynamic")
 
   def __repr__(self):
-    return f"{self.user_id} | {self.title}"
+    return f"<Post: {self.user_id} | {self.title}>"
 
 class Comment(db.Model):
   id = db.Column(db.Integer, primary_key=True)
@@ -31,4 +31,4 @@ class Comment(db.Model):
   created_on = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
   def __repr__(self):
-    return f"{self.email} | {self.body[:50]}..."
+    return f"<Comment: {self.email} | {self.body[:50]}...>"
