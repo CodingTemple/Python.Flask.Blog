@@ -75,108 +75,53 @@
           <div id="section-comments" class="section-comments">
             <!-- comments counter-->
             <div class="row">
-              <div class="col-md-12"><span class="comments-heading">5 Comments</span></div>
+              <div class="col-md-12"><span class="comments-heading">{{ post.comments.count() }} Comments</span></div>
             </div>
             <!-- END comments counter-->
-            <!-- comment 1-->
-            <div class="comment-wrapper">
-              <div class="row">
-                <!-- comment avatar-->
-                <div class="col-md-2 col-sm-2 col-xs-3">
-                  <div class="comment-avatar"><img src="{{ url_for('static', filename='img/blog/avatars/avatar1.jpg') }}" alt="" class="img-responsive">
-                  </div>
-                </div>
-                <!-- END comment avatar-->
-                <!-- comment content & control buttons-->
-                <div class="col-md-10 col-sm-10 col-xs-9">
-                  <div class="comment-content">
-                    <div class="comment-heading">
-                      <h5>Maria Doe</h5>
-                      <time datetime="2016-05-09T12:52">@ 09 May 2016 in 12:52</time>
-                    </div>
-                    <div class="comment-text">
-                      <p>In post mean shot ye. There out her child sir his lived. Design at uneasy me season of branch
-                        on praise esteem. Abilities discourse believing consisted remaining to no. Mistaken no me
-                        denoting dashwood as screened. Whence or esteem easily he on. Dissuade husbands at of no if
-                        disposal.</p>
+            <!-- comment-->
+            {% for comment in comments %}
+              <div class="comment-wrapper">
+                <div class="row">
+                  <!-- comment avatar-->
+                  <div class="col-md-2 col-sm-2 col-xs-3">
+                    <div class="comment-avatar"><img src="{{ url_for('static', filename='img/blog/avatars/avatar1.jpg') }}" alt="" class="img-responsive">
                     </div>
                   </div>
-                  <!-- <div class="comment-controls"><a href="#" class="btn btn-cta">Reply</a></div> -->
+                  <!-- END comment avatar-->
+                  <!-- comment content & control buttons-->
+                  <div class="col-md-10 col-sm-10 col-xs-9">
+                    <div class="comment-content">
+                      <div class="comment-heading">
+                        <h5>{{ comment.name }} &lt;{{ comment.email }}&gt;</h5>
+                        <time datetime="2016-05-09T12:52">@ {{ comment.created_on.strftime('%b %d, %Y | %-I:%-M%p') }}</time>
+                      </div>
+                      <div class="comment-text">
+                        <p>{{ comment.body }}</p>
+                      </div>
+                    </div>
+                    <!-- <div class="comment-controls"><a href="#" class="btn btn-cta">Reply</a></div> -->
+                  </div>
+                  <!-- END comment content & control buttons-->
                 </div>
-                <!-- END comment content & control buttons-->
               </div>
-            </div>
-            <!-- END comment 1-->
-            <!-- comment 2-->
-            <div class="comment-wrapper">
-              <div class="row">
-                <!-- comment avatar-->
-                <div class="col-md-2 col-sm-2 col-xs-3">
-                  <div class="comment-avatar"><img src="{{ url_for('static', filename='img/blog/avatars/avatar2.jpg') }}" alt="" class="img-responsive">
-                  </div>
-                </div>
-                <!-- END comment avatar-->
-                <!-- comment content & control buttons-->
-                <div class="col-md-10 col-sm-10 col-xs-9">
-                  <div class="comment-content">
-                    <div class="comment-heading">
-                      <h5>Michael J.</h5>
-                      <time datetime="2016-05-07T06:52">@ 07 May 2016 in 06:12</time>
-                    </div>
-                    <div class="comment-text">
-                      <p>Certainty listening no no behaviour existence assurance situation is.</p>
-                    </div>
-                  </div>
-                  <!-- <div class="comment-controls"><a href="#" class="btn btn-cta">Reply</a></div> -->
-                </div>
-                <!-- END comment content & control buttons-->
-              </div>
-            </div>
-            <!-- END comment 2-->
-            <!-- comment 3-->
-            <div class="comment-wrapper">
-              <div class="row">
-                <!-- comment avatar-->
-                <div class="col-md-2 col-sm-2 col-xs-3">
-                  <div class="comment-avatar"><img src="{{ url_for('static', filename='img/blog/avatars/avatar4.jpg') }}" alt="" class="img-responsive">
-                  </div>
-                </div>
-                <!-- END comment avatar-->
-                <!-- comment content & control buttons-->
-                <div class="col-md-10 col-sm-10 col-xs-9">
-                  <div class="comment-content">
-                    <div class="comment-heading">
-                      <h5>Anna</h5>
-                      <time datetime="2016-05-05T06:39">@ 05 May 2016 in 06:39</time>
-                    </div>
-                    <div class="comment-text">
-                      <p>In post mean shot ye. There out her child sir his lived. Design at uneasy me season of branch
-                        on praise esteem. Abilities discourse believing consisted remaining to no. Mistaken no me
-                        denoting dashwood as screened. Whence or esteem easily he on. Dissuade husbands at of no if
-                        disposal.</p>
-                    </div>
-                  </div>
-                  <!-- <div class="comment-controls"><a href="#" class="btn btn-cta">Reply</a></div> -->
-                </div>
-                <!-- END comment content & control buttons-->
-              </div>
-            </div>
-            <!-- END comment 3-->
+            {% endfor %}
+            <!-- END comment-->
             <!-- comment form-->
-            <form action="blog-singlepost.html" method="POST" class="form-comment">
+            <form action="" method="POST" class="form-comment">
+              {{ form.hidden_tag() }}
               <div class="row">
                 <div class="col-md-12"><span class="comments-heading">Post comment</span></div>
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <input type="text" name="visitor_name" placeholder="Your Name *" required class="input-left">
-                  <input type="text" name="visitor_email" placeholder="Your E-mail *" required class="input-right">
+                  {{ form.name(placeholder="Your Name *", class="input-left") }}
+                  {{ form.email(placeholder="Your E-mail *", class="input-right") }}
                 </div>
                 <div class="col-md-12">
-                  <textarea name="visitor_msg" placeholder="Your Comment..."></textarea>
+                  {{ form.body(placeholder="Your Comment...") }}
                 </div>
                 <div class="col-md-12">
-                  <button type="submit" class="btn btn-cta">Post comment</button>
+                  {{ form.submit(class="btn btn-cta") }}
                 </div>
               </div>
             </form>

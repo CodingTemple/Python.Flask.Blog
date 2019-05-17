@@ -41,7 +41,7 @@
                     <li class="info-author"><a href="about.html"><i class="pe-7s-user"></i><span>{{ post.author.name }}</span></a>
                     </li>
                     <li class="info-datetime"><a href="/blog/{{ post.id }}"><i class="pe-7s-timer"></i>
-                        <time datetime="2016-05-09T12:52">{{ post.created_on.strftime('%b %d, %Y | %-I:%-M%p') }}</time></a></li>
+                        <time datetime="2016-05-09T12:52">@ {{ post.created_on.strftime('%b %d, %Y | %-I:%-M%p') }}</time></a></li>
                     <li class="info-comments"><a href="/blog/{{ post.id }}#section-comments"><i
                           class="pe-7s-comment"></i><span>{{ post.comments.count() }} Comments</span></a></li>
                     <li class="info-category"><a href="#"><span>Lifestyle</span></a></li>

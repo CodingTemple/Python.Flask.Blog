@@ -1,6 +1,7 @@
-from app import app
-from flask import render_template
+from app import app, db
+from flask import render_template, url_for, redirect
 from app.models import User, Post, Comment
+from app.forms import CommentForm
 
 @app.route('/')
 def index():
@@ -27,9 +28,16 @@ def blog():
 
 @app.route('/blog/<int:id>', methods=['GET', 'POST'])
 def blog_single(id):
+  form = CommentForm()
   context = {
-    'post': Post.query.get(id)
+    'post': Post.query.get(id),
+    'form': form,
+    'comments': Post.query.get(id).comments.all()
   }
+  if form.validate_on_submit():
+    db.session.add(Comment(name=form.name.data, email=form.email.data, body=form.body.data, post_id=id))
+    db.session.commit()
+    return redirect(url_for('blog_single', id=id, _anchor='section-comments'))
   return render_template('blog-single.html', **context)
 
 @app.route('/contact')
